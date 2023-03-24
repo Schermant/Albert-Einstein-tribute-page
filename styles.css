@@ -1,0 +1,122 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .navbar-container {
+        display: none;
+    }
+}
+
+@media screen and (min-width:999px) {
+    header {
+        grid-column: 2 / 4;
+        grid-row: 1;
+        text-align: center;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: antiquewhite;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto(minmax(200px, 1fr));
+    grid-template-rows: fit-content auto;
+    gap: 5px;
+}
+
+header {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    text-align: center;
+}
+header > h1 {
+    margin: 5px auto;
+}
+
+sidebar {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.navbar-container {
+    position: sticky;
+    width: 90%;
+    min-width: fit-content;
+    top: 1rem;
+    align-self: start;
+    border: 1px solid burlywood;
+    border-radius: 5px;
+    height: fit-content;
+    margin: 0 0 0 0;
+    padding: 0 10px 0 0; 
+}
+
+.navbar-container > p {
+    padding: 0 0 0 10px;
+    font-size: 0.8rem;
+}
+.navbar-container ul {
+    padding-inline-start: 15px;
+    list-style: none;
+
+}
+
+main {
+    grid-column: 2;
+    grid-row: 2;
+    padding-bottom: 20rem;
+    min-width: 200px;
+}
+
+section[id='img'] {
+    max-height: fit-content;
+}
+
+
+
+img {
+    display: block;
+    position: relative;
+    margin: 5px auto;
+    width: 100%;
+    max-width: 548px;
+    max-height: 720px;
+}
+
+h3 {
+    margin: 10px auto 2px;
+}
+.author {
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-top: 0;
+    text-align: right;
+}
+
+.info-section ul {
+    list-style: square;
+    padding-inline-start: 15px;
+}
+.info {
+    margin-top: 10px;
+}
+.quote {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    align-self: center;
+}
