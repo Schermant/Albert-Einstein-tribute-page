@@ -4,7 +4,7 @@
     }
 }
 
-@media screen and (max-width:650px) {
+@media screen and (max-width:700px) {
     .navbar-container {
         display: none;
     }
@@ -26,8 +26,20 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header {
+header {
     font-family:'Times New Roman', Times, serif;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    text-align: center;
+    margin: auto;
+}
+
+header > h1 {
+    margin: 5px auto;
+}
+
+header p {
+    font-size: 1.2rem;
 }
 
 .grid-container {
@@ -37,15 +49,15 @@ body {
     gap: 5px;
 }
 
-header {
-    grid-column: 1 / 4;
-    grid-row: 1;
-    text-align: center;
+.divider {
+    display: block;
+    border: 1px solid rgb(223, 198, 165, 0.8);
+    background-color:rgb(223, 198, 165);
+    margin: 0;
+    align-self: right;
+    margin-left: 12px;
 }
-header > h1 {
-    margin: 5px auto;
-}
-
+        
 sidebar {
     grid-column: 1;
     grid-row: 2;
@@ -53,25 +65,42 @@ sidebar {
 
 .navbar-container {
     position: sticky;
-    width: 90%;
+    width: 100%;
     min-width: fit-content;
     top: 1rem;
     align-self: start;
-    border: 1px solid burlywood;
+    border: 3px solid burlywood;
     border-radius: 5px;
     height: fit-content;
-    margin: 0 0 0 0;
-    padding: 0 10px 0 0; 
+    margin: 0 0 0 -25px;
+    padding: 0 10px 0 10px; 
 }
 
 .navbar-container > p {
     padding: 0 0 0 10px;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
 }
 .navbar-container ul {
-    padding-inline-start: 15px;
+    padding-inline-start: 10px;
     list-style: none;
-
+    margin: 12px 0 15px 0;
+}
+.nav-button {
+    margin-top: 5px;
+    color: black;
+    text-decoration: none;
+    margin: 0 0.1rem;
+    padding: 0.2rem 0;
+    display: block;
+}
+.nav-button a {
+    color: inherit;
+    text-decoration: none;
+}
+.nav-button a:hover {
+    text-decoration: underline;
 }
 
 main {
@@ -106,12 +135,14 @@ h3 {
     text-align: right;
 }
 
+
+
 .info-section ul {
     list-style: square;
-    padding-inline-start: 15px;
+    padding-inline-start: 30px;
 }
 .info {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .quote {
     display: block;
