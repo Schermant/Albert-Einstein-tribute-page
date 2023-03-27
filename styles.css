@@ -10,28 +10,31 @@
     }
 }
 
-@media screen and (min-width:999px) {
-    header {
-        grid-column: 2 / 4;
-        grid-row: 1;
-        text-align: center;
-    }
-}
-
 * {
     box-sizing: border-box;
 }
 body {
     background-color: antiquewhite;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px 3px 0 0;
+}
+
+header, main {
+    grid-column: 2;
+    min-width: 200px;
+    max-width: 1000px;
+}
+
+main {
+    grid-row: 2;
+    padding-bottom: 0.5rem;
 }
 
 header {
     font-family:'Times New Roman', Times, serif;
-    grid-column: 2 / 3;
     grid-row: 1;
     text-align: center;
-    margin: auto;
+    margin: 0;
 }
 
 header > h1 {
@@ -67,12 +70,13 @@ sidebar {
     position: sticky;
     width: 100%;
     min-width: fit-content;
+    max-width:fit-content;
     top: 1rem;
     align-self: start;
     border: 3px solid burlywood;
     border-radius: 5px;
     height: fit-content;
-    margin: 0 0 0 -25px;
+    margin: 0 0 0 -16px;
     padding: 0 10px 0 10px; 
 }
 
@@ -95,34 +99,40 @@ sidebar {
     padding: 0.2rem 0;
     display: block;
 }
-.nav-button a {
+.nav-button a , .external-link a {
     color: inherit;
     text-decoration: none;
 }
-.nav-button a:hover {
-    text-decoration: underline;
-}
 
-main {
-    grid-column: 2;
-    grid-row: 2;
-    padding-bottom: 20rem;
-    min-width: 200px;
+a:hover {
+    text-decoration: underline;
 }
 
 section[id='img'] {
     max-height: fit-content;
 }
 
-
+.img-container {
+    display: block;
+    margin: auto;
+    max-width: 548px;
+    align-items: center;
+}
 
 img {
     display: block;
     position: relative;
     margin: 5px auto;
     width: 100%;
-    max-width: 548px;
+    max-width: 100%;
+    height: auto;
     max-height: 720px;
+}
+
+figcaption {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 2px;
 }
 
 h3 {
@@ -135,7 +145,10 @@ h3 {
     text-align: right;
 }
 
-
+.info-section h2 {
+    padding-left: 3px;
+    padding-top: 10px;
+}
 
 .info-section ul {
     list-style: square;
@@ -143,11 +156,22 @@ h3 {
 }
 .info {
     margin-top: 20px;
+    margin-right: 20px;
+    font-size: 17px;
 }
 .quote {
     display: block;
-    width: 60%;
-    margin: 0 auto;
+    width: 65%;
+    margin: 30px auto 0;
     text-align: center;
     align-self: center;
+}
+
+div[id='tribute-link'] p {
+    text-align: center;
+}
+
+.external-link {
+    color: black;
+    text-decoration: underline;
 }
